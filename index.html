@@ -27,22 +27,16 @@
       <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
       <!-- Favicons -->
       <link rel="shortcut icon" href="img/a.ico">
-   </head>
-   <body>
-      <!-- Loader -->
-      <!-- START PRELOADER AREA-->
-      <div class="preloader-area">
-         <div class="d-flex justify-content-center align-items-center h-100">
-            <div class="loader"></div>
-         </div>
-      </div>
-      <!-- END PRELOADER AREA -->
-      <!-- Modal musica fondo -->
-      <div id="modalMusica" class="modal fade" tabindex="-1">
-         <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-               <picture>
-                  <!-- <source type="image/webp" srcset="https://fixdate.io/modelo-invitacion/74/img/adorno-modal-musica.webp"> -->
+                  <p>
+                     Mis 15 años       </p>
+                     <br>
+                     <br>
+
+                  <h3 id="nombreInvitado" class="nombre" style="font-size: 50px; padding-bottom: 25px;background: linear-gradient(90deg, rgb(100, 6, 122) 0%, rgb(191, 137, 203) 35%, rgba(126,14,150,1) 100%); -webkit-background-clip: text; color: transparent; ">
+                     Cargando...
+                  </h3>
+                  <br>
+                  <span id="cantidadPersonas">La música de fondo es parte de la experiencia</span>
                   <source type="image/png" srcset="img/flores_Grupo04.png">
                   <img class="adorno adorno-1" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000" data-aos-once="false" src="img/flores_Grupo04.png" alt="" loading="">
                </picture>
@@ -51,6 +45,8 @@
                      Mis 15 años       </p>
                      <br>
                      <br>
+
+                     
                   
            
                    <h3 class="nombre" style="font-size: 50px; padding-bottom: 25px;background: linear-gradient(90deg, rgb(100, 6, 122) 0%, rgb(191, 137, 203) 35%, rgba(126,14,150,1) 100%); -webkit-background-clip: text; color: transparent; ">
@@ -219,7 +215,7 @@ Porque son parte de mi vida, es mi deseo que compartan conmigo la alegría de mi
                      <div class="info-box">
                         <h6>Recepción</h6>
                         <p> Calle 4 #4-47 Villapinzón Parque Principal <br>
-                        Hora 8:00pm </p>
+                        Hora 7:00pm </p>
                        
                      </div>
                   </div>
@@ -1747,5 +1743,87 @@ Porque son parte de mi vida, es mi deseo que compartan conmigo la alegría de mi
            imageSrc: imageParallax
          });
       </script>
+
+      <script>
+   function getUrlParameter(name) {
+       const url = new URL(window.location.href);
+       return url.searchParams.get(name);
+   }
+
+   window.onload = function () {
+       const id = (getUrlParameter('name') || '').trim(); // Asegura que no haya espacios
+
+       console.log("ID recibido desde la URL:", id); // Útil para depuración
+
+       const invitados = {
+  '003': { nombre: 'Hector y Ubaldina', cantidad: 2 },
+  '004': { nombre: 'Omar, Claudia e hija', cantidad: 3 },
+  '005': { nombre: 'Jaime, Liliana e hijas', cantidad: 4 },
+  '006': { nombre: 'Wilson, Paula e hijas', cantidad: 4 },
+  '007': { nombre: 'Eduardo, Andrea e hijos', cantidad: 4 },
+  '008': { nombre: 'Hector y Camila', cantidad: 2 },
+  '009': { nombre: 'Luis Chitiva y Elizabeth Romero', cantidad: 2 },
+  '010': { nombre: 'Willian Chitiva', cantidad: 1 },
+  '011': { nombre: 'Tatiana Chitiva e hija', cantidad: 2 },
+  '012': { nombre: 'Alonso Patiño y Mirian Duarte', cantidad: 2 },
+  '013': { nombre: 'Alejandro, Yulieth e hijos', cantidad: 4 },
+  '014': { nombre: 'Alonso, Olga e hija', cantidad: 3 },
+  '015': { nombre: 'Sebastian y Tatiana', cantidad: 2 },
+  '016': { nombre: 'Manuel y Maria', cantidad: 2 },
+  '017': { nombre: 'Elba Lopez', cantidad: 1 },
+  '018': { nombre: 'Marcos, Micela e hija', cantidad: 3 },
+  '019': { nombre: 'Sindy Gomez y Juan', cantidad: 2 },
+  '020': { nombre: 'Segundo y Miriam', cantidad: 2 },
+  '021': { nombre: 'Pedro y Lucero', cantidad: 2 },
+  '022': { nombre: 'Luis Cruz', cantidad: 1 },
+  '023': { nombre: 'Maria Cruz', cantidad: 1 },
+  '024': { nombre: 'Hugo Torres y Ines Torres', cantidad: 2 },
+  '025': { nombre: 'Luis y Allison', cantidad: 2 },
+  '026': { nombre: 'Nestor y Karolina', cantidad: 2 },
+  '027': { nombre: 'Diego, Martha e hijas', cantidad: 4 },
+  '028': { nombre: 'Alejandro Mojica, Esperanza e hijo', cantidad: 3 },
+  '029': { nombre: 'Leonardo Gonzalez y Rosalba Gordillo', cantidad: 2 },
+  '030': { nombre: 'Delfin y Emilia', cantidad: 2 },
+  '031': { nombre: 'Fabian y Viviana', cantidad: 2 },
+  '032': { nombre: 'Joselin, Angie e hijas', cantidad: 4 },
+  '033': { nombre: 'Pedro Torres, Ana Beatriz e hijos', cantidad: 4 },
+  '034': { nombre: 'Jorge Torres, Isabel Cristina e hija', cantidad: 3 },
+  '035': { nombre: 'Jonathan, Yulieth e hijas', cantidad: 4 },
+  '036': { nombre: 'Benedicto y Rosa', cantidad: 2 },
+  '037': { nombre: 'Jhon, Angelica e hijos', cantidad: 4 },
+  '038': { nombre: 'Diego, Wendy e hijos', cantidad: 4 },
+  '039': { nombre: 'Miguel Fajardo', cantidad: 1 },
+  '040': { nombre: 'Jose Lopez y Marina', cantidad: 2 },
+  '041': { nombre: 'Efren y Mery', cantidad: 2 },
+  '042': { nombre: 'Miriam Torres', cantidad: 1 },
+  '043': { nombre: 'Carlos Bocachica, Tatiana e hija', cantidad: 3 },
+  '044': { nombre: 'Rodrigo y Marcela', cantidad: 2 },
+  '045': { nombre: 'Fernando, Alicia e hijos', cantidad: 4 },
+  '046': { nombre: 'Luisa', cantidad: 1 },
+  '047': { nombre: 'Dayana', cantidad: 1 },
+  '048': { nombre: 'Emily', cantidad: 1 },
+  '049': { nombre: 'Natalia', cantidad: 1 },
+  '050': { nombre: 'Michell', cantidad: 1 },
+  '051': { nombre: 'Maryi', cantidad: 1 },
+  '052': { nombre: 'Karen', cantidad: 1 },
+  '053': { nombre: 'Veronica', cantidad: 1 },
+  '054': { nombre: 'Lina', cantidad: 1 },
+  '055': { nombre: 'Sharit', cantidad: 1 },
+  '056': { nombre: 'Yeimi Espinoza e hijos', cantidad: 3 }
+}
+
+
+   
+       const data = invitados[id] || invitados['default'];
+
+       const nombreEl = document.getElementById('nombreInvitado');
+       const cantidadEl = document.getElementById('cantidadPersonas');
+
+       if (nombreEl) nombreEl.textContent = data.nombre;
+       if (cantidadEl) {
+           cantidadEl.textContent = `Hemos reservado ${data.cantidad} lugar${data.cantidad > 1 ? 'es' : ''} en su honor.`;
+       }
+   };
+</script>
    </body>
 </html>
