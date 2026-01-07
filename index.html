@@ -1820,7 +1820,8 @@ Porque son parte de mi vida, es mi deseo que compartan conmigo la alegría de mi
 
 
    
-       const data = invitados[id] || invitados['default'];
+      const defaultInvitado = { nombre: 'Sara Valentina', cantidad: 1 };
+      const data = invitados[id] || defaultInvitado;
 
        const nombreEl = document.getElementById('nombreInvitado');
        const cantidadEl = document.getElementById('cantidadPersonas');
