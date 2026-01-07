@@ -27,16 +27,22 @@
       <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
       <!-- Favicons -->
       <link rel="shortcut icon" href="img/a.ico">
-                  <p>
-                     Mis 15 años       </p>
-                     <br>
-                     <br>
-
-                  <h3 id="nombreInvitado" class="nombre" style="font-size: 50px; padding-bottom: 25px;background: linear-gradient(90deg, rgb(100, 6, 122) 0%, rgb(191, 137, 203) 35%, rgba(126,14,150,1) 100%); -webkit-background-clip: text; color: transparent; ">
-                     Cargando...
-                  </h3>
-                  <br>
-                  <span id="cantidadPersonas">La música de fondo es parte de la experiencia</span>
+   </head>
+   <body>
+      <!-- Loader -->
+      <!-- START PRELOADER AREA-->
+      <div class="preloader-area">
+         <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="loader"></div>
+         </div>
+      </div>
+      <!-- END PRELOADER AREA -->
+      <!-- Modal musica fondo -->
+      <div id="modalMusica" class="modal fade" tabindex="-1">
+         <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+               <picture>
+                  <!-- <source type="image/webp" srcset="https://fixdate.io/modelo-invitacion/74/img/adorno-modal-musica.webp"> -->
                   <source type="image/png" srcset="img/flores_Grupo04.png">
                   <img class="adorno adorno-1" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000" data-aos-once="false" src="img/flores_Grupo04.png" alt="" loading="">
                </picture>
@@ -45,8 +51,6 @@
                      Mis 15 años       </p>
                      <br>
                      <br>
-
-                     
                   
            
                    <h3 class="nombre" style="font-size: 50px; padding-bottom: 25px;background: linear-gradient(90deg, rgb(100, 6, 122) 0%, rgb(191, 137, 203) 35%, rgba(126,14,150,1) 100%); -webkit-background-clip: text; color: transparent; ">
@@ -215,7 +219,7 @@ Porque son parte de mi vida, es mi deseo que compartan conmigo la alegría de mi
                      <div class="info-box">
                         <h6>Recepción</h6>
                         <p> Calle 4 #4-47 Villapinzón Parque Principal <br>
-                        Hora 7:00pm </p>
+                        Hora 8:00pm </p>
                        
                      </div>
                   </div>
@@ -1744,7 +1748,9 @@ Porque son parte de mi vida, es mi deseo que compartan conmigo la alegría de mi
          });
       </script>
 
-      <script>
+
+
+<script>
    function getUrlParameter(name) {
        const url = new URL(window.location.href);
        return url.searchParams.get(name);
@@ -1755,7 +1761,7 @@ Porque son parte de mi vida, es mi deseo que compartan conmigo la alegría de mi
 
        console.log("ID recibido desde la URL:", id); // Útil para depuración
 
-       const invitados = {
+    const invitados = {
   '003': { nombre: 'Hector y Ubaldina', cantidad: 2 },
   '004': { nombre: 'Omar, Claudia e hija', cantidad: 3 },
   '005': { nombre: 'Jaime, Liliana e hijas', cantidad: 4 },
